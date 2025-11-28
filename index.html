@@ -1,11 +1,215 @@
 <!DOCTYPE html>
-<html>
-<title>achadinhos da portaria</title>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achadinhos da Portaria - Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>/* Importando uma fonte sans-serif moderna para o estilo */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #5d3fec; /* Cor do ícone e detalhes */
+    --text-color: #333;
+    --light-gray: #f7f7f7; /* Fundo do corpo */
+    --border-color: #ddd;
+    --input-bg: #fff;
+    --button-bg: #333;
+    --button-text: #fff;
+}
+
+/* Reset básico e tipografia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container principal do formulário */
+.login-container {
+    background-color: var(--input-bg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Largura fixa como na imagem */
+    text-align: center;
+}
+
+/* Estilo do cabeçalho */
+.header {
+    margin-bottom: 30px;
+}
+
+.icon-circle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.icon-circle i {
+    font-size: 32px;
+    color: var(--input-bg);
+}
+
+.header h1 {
+    font-size: 24px;
+    color: var(--text-color);
+    margin: 5px 0 0;
+    font-weight: 600;
+}
+
+.header .subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+/* Estilo do formulário e campos */
+.login-form {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    color: var(--text-color);
+    background-color: var(--input-bg);
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Estilo do botão de login */
+.login-button {
+    width: 100%;
+    padding: 12px 0;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-button:hover {
+    background-color: #444;
+}
+
+.login-button:active {
+    transform: scale(0.99);
+}
+
+.login-button i {
+    font-size: 20px;
+}
+
+/* Estilo das credenciais de teste */
+.test-credentials {
+    background-color: #f9f9f9; /* Fundo leve para destaque */
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 1px solid var(--border-color);
+    text-align: left;
+    margin-top: 30px;
+    font-size: 12px;
+    color: #666;
+}
+
+.test-credentials h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.test-credentials p {
+    margin-bottom: 5px;
+    word-break: break-word; /* Para garantir que o texto longo não quebre o layout */
+    line-height: 1.4;
+}
+
+.test-credentials strong {
+    color: var(--primary-color); /* Destacando o nível de acesso */
+    font-weight: 700;
+    display: inline-block;
+    min-width: 90px;
+}</style>
+</head>
 <body>
+    <div class="login-container">
+        <div class="header">
+            <div class="icon-circle"><i class='bx bxs-package'></i></div>
+            <h1>Achadinhos da Portaria</h1>
+            <p class="subtitle">Sistema de Gestão de Entregas</p>
+        </div>
 
-<h1>Achadinhos da portaria
-</h1>
-<p>Deixe que a gente cuida das suas encomendas.</p>
+        <form class="login-form">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="admin@system.com" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" value="********" required> 
+            </div>
 
+            <button type="submit" class="login-button">
+                <i class='bx bxs-hand-right'></i>
+                Entrar
+            </button>
+        </form>
+
+        <div class="test-credentials">
+            <h2>Credenciais de Teste:</h2>
+            <p><strong>SUPERADMIN:</strong> admin@system.com / Admin@123</p>
+            <p><strong>SYSADMIN:</strong> sindico@residencialexemplo.com.br / Sindico@123</p>
+            <p><strong>ADMIN:</strong> porteiro1@residencialexemplo.com.br / Porteiro@123</p>
+            <p><strong>USER:</strong> ana.costa@email.com / Morador@123</p>
+        </div>
+    </div>
 </body>
 </html>
